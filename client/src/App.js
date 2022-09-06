@@ -1,8 +1,19 @@
 import React from 'react'
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Chat from './pages/Chat'
 function App() {
   return (
-    <div className="text-red-500 text-3xl">
-  <h1>test</h1>
+    <div >
+      <Router>
+        <Routes>
+          <Route path='/' element={<Chat/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login/>}/>
+        </Routes>
+      </Router>
+  
     </div>
   );
 }
